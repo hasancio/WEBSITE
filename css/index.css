@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    padding: 22px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.navbar nav a {
+    font-size: 18px;
+    margin-left: 28px;
+    text-decoration: none;
+    color: #444;
+    padding-bottom: 6px;
+    transition: 0.25s ease;
+    position: relative;
+}
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #777;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+
+.hero {
+    max-width: 1100px;
+    margin: 80px auto 40px auto;
+    padding: 50px;
+    background: white;
+    border-radius: 35px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-left {
+    flex: 2;
+}
+
+.hello {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777;
+    margin: 0 0 5px 0;
+}
+
+.hero-left h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.hero-left h2 {
+    font-size: 22px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.hero-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 12px;
+    transition: 0.25s ease;
+}
+
+.btn.primary {
+    background: #333;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+.btn.ghost {
+    border: 1px solid #ccc;
+    color: #333;
+    background: white;
+}
+
+.btn.ghost:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-photo-placeholder {
+    width: 220px;
+    height: 220px;
+    border-radius: 35px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 16px;
+}
+
+.hero-photo-placeholder span {
+    text-align: center;
+}
+
+
+.quick-cards {
+    max-width: 1100px;
+    margin: 10px auto 80px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.q-card {
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: 0.25s ease;
+}
+
+.q-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.q-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.q-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-right {
+        order: -1;
+    }
+
+    .quick-cards {
+        grid-template-columns: 1fr;
+    }
+}
+.hero-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 35px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.footer {
+    background: white;
+    padding: 40px 0 30px 0;
+    margin-top: 70px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0 -4px 25px rgba(0,0,0,0.07);
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.social-link img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.85;
+    transition: 0.25s ease;
+}
+
+.social-link img:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.footer-copy {
+    color: #777;
+    font-size: 14px;
+    margin-top: 10px;
+}

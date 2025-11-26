@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    background: #f7f7f7;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    padding: 22px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.navbar nav a {
+    font-size: 18px;
+    margin-left: 28px;
+    text-decoration: none;
+    color: #444;
+    padding-bottom: 6px;
+    transition: 0.25s ease;
+    position: relative;
+}
+
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #777;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+}
+
+.me-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: white;
+    padding: 50px;
+    margin: 60px auto 70px auto;
+    max-width: 1100px;
+    border-radius: 35px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+    flex-direction: row-reverse;   
+    transition: 0.3s ease;         
+}
+
+.me-section:hover {
+    transform: scale(1.02);
+}
+
+
+.me-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.me-photo {
+    width: 260px;
+    height: 260px;
+    border-radius: 35px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.me-right {
+    flex: 2;
+}
+
+.me-right h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.me-right p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-block {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: white;
+    padding: 50px;
+    border-radius: 35px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.about-block:hover {
+    transform: scale(1.02);
+}
+
+.about-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.block-img {
+    width: 320px;
+    height: 320px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.right h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.right p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
